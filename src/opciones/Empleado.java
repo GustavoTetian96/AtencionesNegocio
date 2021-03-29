@@ -14,9 +14,20 @@ public class Empleado extends Persona {
     public Empleado(String cedula){
         super(cedula);
     }
+    public Empleado(String cedula, boolean activo){
+        super(cedula);
+        this.esActivo=activo;
+    }
+    public Empleado(String cedula, boolean activo,String nombre,String telefono,String email){
+        super(cedula);
+        this.setNombre(nombre);
+        this.setTelefono(telefono);
+        this.setEmail(email);
+        this.esActivo=activo;
+    }
 
     public boolean isEsActivo() {
-        return esActivo;
+        return this.esActivo;
     }
 
     public void setEsActivo(boolean esActivo) {
