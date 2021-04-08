@@ -85,7 +85,7 @@ public class Sistema {
         Scanner ed = new Scanner(System.in);
         int atributo=0;
         String indicacion="\nModificar\n1.Nombre\n2.telefono\n3.email\n4.direccion\n5.horaInicio\n6.horaFin\n7.Administrador\n8.regresar\nIngrese Opcion[1-8]:\t";
-        String sn,nombre="",telefono="",email="",direccion="",horainicio="",horafin="",cedula;
+        String sn,nombre="",telefono="",email="",direccion="",horainicio="",horafin="",cedula="";
         System.out.println("¿Editar informacion? [S/N]");
         sn=ed.nextLine().toUpperCase();
         if(sn.equals("S")){
@@ -103,13 +103,14 @@ public class Sistema {
                     if(atributo==5){n.setHoraInicioAtencion(ingresoDato(horainicio,"Hora de inicio"));}
                     if(atributo==6){n.setHoraFinAtencion(ingresoDato(horafin,"Hora fin"));}
                     if(atributo==7){
-                        System.out.println("Ingrese cedula nuevo Administrador");
-                        cedula=ed.nextLine();
-                        Empleado empl= new Empleado(cedula);
+                        Scanner nn = new Scanner(System.in);
+                        System.out.println("Ingrese cedula nuevo Administrador:");
+                        cedula=nn.nextLine();
+                        Persona empl= new Empleado(cedula);                        
                         for(Empleado e: n.getEmpleados()){
                             if(empl.equals(e)){
                                 n.setAdministrador(e);
-                                System.out.printf("Employee with ID:%s has been assigned as administrator",cedula);
+                                System.out.printf("\nEmployee with ID:%s has been assigned as administrator\n",cedula);
                             }
                         }
                     }
