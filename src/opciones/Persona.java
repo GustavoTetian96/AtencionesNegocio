@@ -9,7 +9,7 @@ package opciones;
  *
  * @author Gustavo
  */
-public class Persona {
+public abstract class Persona {
     private String cedula;
     private String nombre;
     private String telefono;
@@ -38,5 +38,15 @@ public class Persona {
     public String toString() {
         return "Persona{" + "cedula=" + cedula + ", nombre=" + nombre + ", telefono=" + telefono + ", email=" + email + '}';
     }
-    
+    public abstract void usuario();
+    public boolean equals(Object obj){
+        if(this==obj){
+            return true;
+        }
+        if(obj!=null && obj instanceof Persona){
+            Persona user = (Persona)obj;
+            return cedula.equals(user.cedula);
+        }
+        return false;
+    }
 }

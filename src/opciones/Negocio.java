@@ -51,6 +51,34 @@ public class Negocio {
     public void setAdministrador(Empleado empleado) { //para asignar administrador manualmente
         this.Administrador = empleado;
     }
+
+    public void setEmpleados(ArrayList<Empleado> empleados) {
+        this.empleados = empleados;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public void setHoraInicioAtencion(String horaInicioAtencion) {
+        this.horaInicioAtencion = horaInicioAtencion;
+    }
+
+    public void setHoraFinAtencion(String horaFinAtencion) {
+        this.horaFinAtencion = horaFinAtencion;
+    }
     
     @Override
     public String toString() {

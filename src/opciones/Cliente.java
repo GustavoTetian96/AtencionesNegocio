@@ -13,4 +13,7 @@ public class Cliente extends Persona{
     public Cliente(String cedula){
         super(cedula);
     }
+    public void usuario(){
+         System.out.println("Ejemplo de implementacion metodo abstracto de padre");
+     }
 }

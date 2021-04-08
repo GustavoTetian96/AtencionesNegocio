@@ -33,5 +33,8 @@ public class Empleado extends Persona {
     public void setEsActivo(boolean esActivo) {
         this.esActivo = esActivo;
     }
+     public void usuario(){
+         System.out.println("Ejemplo de implementacion metodo abstracto de padre");
+     }
     
 }
